@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Page</title>
+    <style>
+      *{
+        font-family: 'Segoe UI', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="current-date">
+      <script>
+        document.getElementById("current-date").textContent = new Date().toDateString();
+      </script>
+    </p>
+    <h1>Example</h1>
+    <div>
+      <strong>Thank you for taking part 😍</strong>
+      <p>Please complete this document to help us improve future sessions</p>
+    </div>
+    <form>
+      <fieldset>
+        <p>
+          <label for="Q1" style="display: block"
+            >1.Question text goes here</label
+          >
+          <textarea
+            id="Q1"
+            name="Q1"
+            cols="12"
+            rows="4"
+            title="Question 1 response"
+            placeholder=" "
+          ></textarea>
+        </p>
+        <p>
+          <label for="Q2" style="display: block"
+            >2.Question text goes here</label
+          >
+          <textarea
+            id="Q2"
+            name="Q2"
+            cols=""
+            rows="4"
+            title="Question 2 response"
+            placeholder=" "
+          ></textarea>
+        </p>
+        <p>
+          <label for="Q3" style="display: block;"
+            >3.Question text goes here.<span
+               style="font-weight: lighter; color: grey;">1 = Strongly Agree, 5 = Strongly Disagree</span
+            >
+          </label>
+          <input type="radio" id="Q3" name="value" value="1" />1
+          <input type="radio" id="Q3" name="value" value="2" />2
+          <input type="radio" id="Q3" name="value" value="3" />3
+          <input type="radio" id="Q3" name="value" value="4" />4
+          <input type="radio" id="Q3" name="value" value="5" />5
+        </p>
+        <br>
+          <label for="Q4" style="display: block;">4.Question text goes here</label>
+          <input type="radio" id="Q4" name="value" value="1" />multiple Choice
+          Answer<br/>
+          <input type="radio" id="Q4" name="value" value="1" />multiple
+          Choice Answer<br/>
+          <input type="radio" id="Q4" name="value" value="1" />multiple Choice
+          Answer<br/>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
