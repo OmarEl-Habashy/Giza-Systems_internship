@@ -4,26 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Table</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="form">
-      <form>
-        <input type="text" id="name" placeholder="Name" />
-        <input type="text" id="company" placeholder="Company" />
-        <input type="file" id="user_pic" />
-        <input type="number" id="cart" placeholder="Cart Value" />
-        <button type="button" id="add-btn" onclick="addRow()">Add</button>
-      </form>
-    </div>
-
-    <div class="container">
-      <div class="table-container">
+    <div class="container mt-5 mb-5">
+      <div class="table-container mb-5">
         <div class="table-row">
           <div class="table-header"></div>
           <div class="table-header">Name</div>
           <div class="table-header">Company</div>
-          <div class="table-header">User</div>
           <div class="table-header">Cart</div>
           <div class="table-header"></div>
         </div>
@@ -35,16 +28,9 @@
             </div>
             <div class="table-cell">Bessie Cooper</div>
             <div class="table-cell">IBM</div>
-            <div class="table-cell">
-              <img
-                src="https://via.placeholder.com/40"
-                alt="User"
-                class="user-pic"
-              />
-            </div>
             <div class="table-cell">453 €</div>
             <div class="table-cell">
-              <button class="edit-btn">✏️</button>
+              <button class="edit-btn" onclick="editRow(this)">✏️</button>
             </div>
           </div>
 
@@ -54,20 +40,24 @@
             </div>
             <div class="table-cell">Wade Warren</div>
             <div class="table-cell">L'Oréal</div>
-            <div class="table-cell">
-              <img
-                src="https://via.placeholder.com/40"
-                alt="User"
-                class="user-pic"
-              />
-            </div>
             <div class="table-cell">994 €</div>
             <div class="table-cell">
-              <button class="edit-btn">✏️</button>
+              <button class="edit-btn" onclick="editRow(this)">✏️</button>
             </div>
           </div>
         </div>
       </div>
+      <div id="form" class="form-container d-none">
+        <h1>Add Entry</h1>
+        <form class="form">
+          <input type="text" id="name" placeholder="Name" />
+          <input type="text" id="company" placeholder="Company" />
+          <input type="number" id="cart" placeholder="Cart Value" />
+          <button type="button" id="add-btn">Add</button>
+        </form>
+      </div>
+      <button id="add-entry-btn" class="btn btn-primary">Add Entry</button>
     </div>
+    <script src="table.js"></script>
   </body>
 </html>
